@@ -13,7 +13,7 @@ async function getFakeCaptcha(req, res) {
 
 const { ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION } = process.env;
 /**
- * 当前用户的权限，如果为空代表没Login
+ * 当前用户的权限，如果为空代表没登录
  * current user access， if is '', user need login
  * 如果是 pro 的预览，默认是有权限的
  */
@@ -33,7 +33,7 @@ export default {
           isLogin: false,
         },
         errorCode: '401',
-        errorMessage: 'Please login first',
+        errorMessage: '请先登录！',
         success: true,
       });
       return;
@@ -42,7 +42,7 @@ export default {
     res.send({
       success: true,
       data: {
-        name: 'Tommy Tan',
+        name: 'Serati Ma',
         avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
         userid: '00000001',
         email: 'antdesign@alipay.com',

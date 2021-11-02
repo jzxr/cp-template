@@ -14,15 +14,15 @@ export default [
         ],
       },
       {
-        component: './404',
+        component: './Home',
       },
     ],
   },
   {
-    path: '/welcome',
-    name: 'welcome',
+    path: '/Home',
+    name: 'Home',
     icon: 'smile',
-    component: './Welcome',
+    component: './Home',
   },
   {
     path: '/admin',
@@ -35,7 +35,7 @@ export default [
         path: '/admin/sub-page',
         name: 'sub-page',
         icon: 'smile',
-        component: './Welcome',
+        component: './Home',
       },
       {
         component: './404',
@@ -50,7 +50,7 @@ export default [
   },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/Home',
   },
   {
     component: './404',

@@ -49,6 +49,7 @@ const HeaderSearch = (props) => {
         key="Icon"
         style={{
           cursor: 'pointer',
+          color:'#000',
         }}
       />
       <AutoComplete

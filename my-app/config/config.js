@@ -59,102 +59,23 @@ export default defineConfig({
           component: './user/register',
         },
         {
-          component: '404',
+          component: './Home',
         },
       ],
     },
+    
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      icon: 'dashboard',
-      
-    },
-    {
-      path: '/form',
-      icon: 'form',
-      name: 'form',
-      routes: [
-        {
-          path: '/form',
-          redirect: '/form/basic-form',
-        },
-        {
-          name: 'basic-form',
-          icon: 'smile',
-          path: '/form/basic-form',
-          component: './form/basic-form',
-        },
-        {
-          name: 'step-form',
-          icon: 'smile',
-          path: '/form/step-form',
-          component: './form/step-form',
-        },
-        {
-          name: 'advanced-form',
-          icon: 'smile',
-          path: '/form/advanced-form',
-          component: './form/advanced-form',
-        },
-      ],
-    },
-    {
-      path: '/list',
+      name: 'Home',
       icon: 'table',
-      name: 'list',
-      routes: [
-        {
-          path: '/list/search',
-          name: 'search-list',
-          component: './list/search',
-          routes: [
-            {
-              path: '/list/search',
-              redirect: '/list/search/articles',
-            },
-            {
-              name: 'articles',
-              icon: 'smile',
-              path: '/list/search/articles',
-              component: './list/search/articles',
-            },
-            {
-              name: 'projects',
-              icon: 'smile',
-              path: '/list/search/projects',
-              component: './list/search/projects',
-            },
-            {
-              name: 'applications',
-              icon: 'smile',
-              path: '/list/search/applications',
-              component: './list/search/applications',
-            },
-          ],
-        },
-        {
-          path: '/list',
-          redirect: '/list/table-list',
-        },
-        {
-          name: 'table-list',
-          icon: 'smile',
-          path: '/list/table-list',
-          component: './list/table-list',
-        },
-        {
-          name: 'basic-list',
-          icon: 'smile',
-          path: '/list/basic-list',
-          component: './list/basic-list',
-        },
-        {
-          name: 'card-list',
-          icon: 'smile',
-          path: '/list/card-list',
-          component: './list/card-list',
-        },
-      ],
+      path: '/Home',
+      component: './Home',
+    },
+    {
+      path: '/Home',
+      redirect: '/Home',
+    },
+    {
+      component: './Home',
     },
     {
       path: '/profile',
@@ -255,40 +176,11 @@ export default defineConfig({
       ],
     },
     {
-      name: 'editor',
-      icon: 'highlight',
-      path: '/editor',
-      routes: [
-        {
-          path: '/editor',
-          redirect: '/editor/flow',
-        },
-        {
-          name: 'flow',
-          icon: 'smile',
-          path: '/editor/flow',
-          component: './editor/flow',
-        },
-        {
-          name: 'mind',
-          icon: 'smile',
-          path: '/editor/mind',
-          component: './editor/mind',
-        },
-        {
-          name: 'koni',
-          icon: 'smile',
-          path: '/editor/koni',
-          component: './editor/koni',
-        },
-      ],
-    },
-    {
       path: '/',
-      redirect: '/dashboard/analysis',
+      redirect: './Home',
     },
     {
-      component: '404',
+      component: './Home',
     },
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn

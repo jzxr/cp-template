@@ -18,7 +18,7 @@ function getCity(req, res) {
 function getCurrentUse(req, res) {
   return res.json({
     data: {
-      name: 'Serati Ma',
+      name: 'Tommy Tan',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
       userid: '00000001',
       email: 'antdesign@alipay.com',

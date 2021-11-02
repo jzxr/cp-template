@@ -46,7 +46,7 @@ const user = [
 ]; // 当前用户信息
 
 const currentUseDetail = {
-  name: 'Serati Ma',
+  name: 'Tommy Tan',
   avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
   userid: '00000001',
   email: 'antdesign@alipay.com',

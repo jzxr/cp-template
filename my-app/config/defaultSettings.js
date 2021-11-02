@@ -1,3 +1,4 @@
+
 const Settings = {
   navTheme: 'light',
   // 拂晓蓝
@@ -8,7 +9,8 @@ const Settings = {
   fixSiderbar: true,
   colorWeak: false,
   pwa: false,
-  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  logo: 'https://www.cloudplus.com.sg/wp-content/uploads/2021/05/weblogo.png',
+  title:null,
   iconfontUrl: '',
 };
 export default Settings;

@@ -2,7 +2,7 @@
 const Settings = {
   navTheme: 'light',
   // 拂晓蓝
-  primaryColor: '#1890ff',
+  primaryColor: '#62c2d3',
   layout: 'mix',
   contentWidth: 'Fluid',
   fixedHeader: false,

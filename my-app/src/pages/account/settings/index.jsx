@@ -10,10 +10,8 @@ const { Item } = Menu;
 
 const Settings = () => {
   const menuMap = {
-    base: '基本设置',
-    security: '安全设置',
-    binding: '账号绑定',
-    notification: '新消息通知',
+    base: 'Profile settings',
+    notification: 'Notification settings',
   };
   const [initConfig, setInitConfig] = useState({
     mode: 'inline',
@@ -63,12 +61,6 @@ const Settings = () => {
     switch (selectKey) {
       case 'base':
         return <BaseView />;
-
-      case 'security':
-        return <SecurityView />;
-
-      case 'binding':
-        return <BindingView />;
 
       case 'notification':
         return <NotificationView />;

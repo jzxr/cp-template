@@ -84,6 +84,32 @@ const Login = () => {
           onFinish={async (values) => {
             await handleSubmit(values);
           }}
+
+          submitter={{
+            // 配置按钮文本
+            searchConfig: {
+              resetText: 'Reset',
+              submitText: 'Submit',
+            },
+            // 配置按钮的属性
+            resetButtonProps: {
+              style: {
+                // 隐藏重置按钮
+                display: 'none',
+              },
+            },
+            submitButtonProps: {},
+
+            // 完全自定义整个区域
+            render: (props, doms) => {
+              console.log(props);
+              return(
+              <Button type="primary" key="submit" style={{ width: '330px' }} onClick={() => props.form?.submit?.()}>
+                Login
+              </Button>
+              )
+            },
+          }}
         >
           <Tabs activeKey={type} onChange={setType}>
             <Tabs.TabPane

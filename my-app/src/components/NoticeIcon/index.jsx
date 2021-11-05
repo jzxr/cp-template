@@ -125,22 +125,7 @@ const NoticeIconView = () => {
         emptyText="You are up-to-date"
         showViewMore
       />
-      <NoticeIcon.Tab
-        tabKey="message"
-        count={unreadMsg.message}
-        list={noticeData.message}
-        title="Message"
-        emptyText="You have read all the messages"
-        showViewMore
-      />
-      <NoticeIcon.Tab
-        tabKey="event"
-        title="Event"
-        emptyText="You have completed all the events"
-        count={unreadMsg.event}
-        list={noticeData.event}
-        showViewMore
-      />
+      
     </NoticeIcon>
   );
 };

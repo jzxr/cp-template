@@ -1,60 +1,11 @@
-import { PlusOutlined, HomeOutlined, ContactsOutlined, ClusterOutlined } from '@ant-design/icons';
+import { PlusOutlined, NumberOutlined, ContactsOutlined, MailOutlined } from '@ant-design/icons';
 import { Avatar, Card, Col, Divider, Input, Row, Tag } from 'antd';
 import React, { useState, useRef } from 'react';
 import { GridContent } from '@ant-design/pro-layout';
 import { Link, useRequest } from 'umi';
-import Projects from './components/Projects';
-import Articles from './components/Articles';
-import Applications from './components/Applications';
 import { queryCurrent } from './service';
 import styles from './Center.less';
-const operationTabList = [
-  {
-    key: 'articles',
-    tab: (
-      <span>
-        文章{' '}
-        <span
-          style={{
-            fontSize: 14,
-          }}
-        >
-          (8)
-        </span>
-      </span>
-    ),
-  },
-  {
-    key: 'applications',
-    tab: (
-      <span>
-        应用{' '}
-        <span
-          style={{
-            fontSize: 14,
-          }}
-        >
-          (8)
-        </span>
-      </span>
-    ),
-  },
-  {
-    key: 'projects',
-    tab: (
-      <span>
-        项目{' '}
-        <span
-          style={{
-            fontSize: 14,
-          }}
-        >
-          (8)
-        </span>
-      </span>
-    ),
-  },
-];
+
 
 const TagList = ({ tags }) => {
   const ref = useRef(null);
@@ -95,7 +46,7 @@ const TagList = ({ tags }) => {
 
   return (
     <div className={styles.tags}>
-      <div className={styles.tagsTitle}>标签</div>
+      <div className={styles.tagsTitle}>Tags</div>
       {(tags || []).concat(newTags).map((item) => (
         <Tag key={item.key}>{item.label}</Tag>
       ))}
@@ -134,7 +85,7 @@ const Center = () => {
     return queryCurrent();
   }); //  渲染用户信息
 
-  const renderUserInfo = ({ title, group, geographic }) => {
+  const renderUserInfo = ({ title, email, phone }) => {
     return (
       <div className={styles.detail}>
         <p>
@@ -146,62 +97,32 @@ const Center = () => {
           {title}
         </p>
         <p>
-          <ClusterOutlined
+          <MailOutlined
             style={{
               marginRight: 8,
             }}
           />
-          {group}
+          {email}
         </p>
         <p>
-          <HomeOutlined
+          <NumberOutlined
             style={{
               marginRight: 8,
             }}
           />
-          {
-            (
-              geographic || {
-                province: {
-                  label: '',
-                },
-              }
-            ).province.label
-          }
-          {
-            (
-              geographic || {
-                city: {
-                  label: '',
-                },
-              }
-            ).city.label
-          }
+          {phone}
         </p>
+       
       </div>
     );
   }; // 渲染tab切换
 
-  const renderChildrenByTabKey = (tabValue) => {
-    if (tabValue === 'projects') {
-      return <Projects />;
-    }
-
-    if (tabValue === 'applications') {
-      return <Applications />;
-    }
-
-    if (tabValue === 'articles') {
-      return <Articles />;
-    }
-
-    return null;
-  };
+  
 
   return (
     <GridContent>
       <Row gutter={24}>
-        <Col lg={7} md={24}>
+        <Col lg={24} md={24}>
           <Card
             bordered={false}
             style={{
@@ -225,37 +146,12 @@ const Center = () => {
                   }}
                   dashed
                 />
-                <div className={styles.team}>
-                  <div className={styles.teamTitle}>团队</div>
-                  <Row gutter={36}>
-                    {currentUser.notice &&
-                      currentUser.notice.map((item) => (
-                        <Col key={item.id} lg={24} xl={12}>
-                          <Link to={item.href}>
-                            <Avatar size="small" src={item.logo} />
-                            {item.member}
-                          </Link>
-                        </Col>
-                      ))}
-                  </Row>
-                </div>
+               
               </div>
             )}
           </Card>
         </Col>
-        <Col lg={17} md={24}>
-          <Card
-            className={styles.tabsCard}
-            bordered={false}
-            tabList={operationTabList}
-            activeTabKey={tabKey}
-            onTabChange={(_tabKey) => {
-              setTabKey(_tabKey);
-            }}
-          >
-            {renderChildrenByTabKey(tabKey)}
-          </Card>
-        </Col>
+        
       </Row>
     </GridContent>
   );

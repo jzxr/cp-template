@@ -26,11 +26,11 @@ const GlobalHeaderRight = () => {
       <HeaderSearch
         className={`${styles.action} ${styles.search}`}
         placeholder="Search"
-        defaultValue="umi ui"
+        defaultValue="Search"
         options={[
           {
-            label: <a href="https://umijs.org/zh/guide/umi-ui.html">umi ui</a>,
-            value: 'umi ui',
+            label: <a href="https://umijs.org/zh/guide/umi-ui.html">User</a>,
+            value: 'user',
           },
           {
             label: <a href="next.ant.design">Ant Design</a>,
@@ -48,14 +48,7 @@ const GlobalHeaderRight = () => {
         //   console.log('input', value);
         // }}
       />
-      <span
-        className={styles.action}
-        onClick={() => {
-          window.open('https://pro.ant.design/docs/getting-started');
-        }}
-      >
-        <QuestionCircleOutlined />
-      </span>
+      
       <NoticeIconView />
       <Avatar menu />
       <SelectLang className={styles.action} />

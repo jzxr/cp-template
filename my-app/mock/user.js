@@ -42,55 +42,43 @@ export default {
     res.send({
       success: true,
       data: {
-        name: 'Serati Ma',
+        name: 'Tommy Tan',
         avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
         userid: '00000001',
-        email: 'antdesign@alipay.com',
-        signature: '海纳百川，有容乃大',
-        title: '交互专家',
-        group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+        email: 'tommy@clousplus.com',
+        signature: 'Love my job!',
+        title: 'Admin',
         tags: [
           {
             key: '0',
-            label: '很有想法的',
+            label: 'Admin',
           },
           {
             key: '1',
-            label: '专注设计',
+            label: 'Excel expert',
           },
           {
             key: '2',
-            label: '辣~',
+            label: 'Account management',
           },
           {
             key: '3',
-            label: '大长腿',
+            label: 'Word doc expert',
           },
           {
             key: '4',
-            label: '川妹子',
+            label: 'Admin lover',
           },
           {
             key: '5',
-            label: '海纳百川',
+            label: 'Love cloudplus',
           },
         ],
-        notifyCount: 12,
-        unreadCount: 11,
-        country: 'China',
-        access: getAccess(),
-        geographic: {
-          province: {
-            label: '浙江省',
-            key: '330000',
-          },
-          city: {
-            label: '杭州市',
-            key: '330100',
-          },
-        },
-        address: '西湖区工专路 77 号',
-        phone: '0752-268888888',
+        notifyCount: 5,
+        unreadCount: 6,
+        country: 'Singapore',
+        
+        phone: '65-98765432',
       },
     });
   },
